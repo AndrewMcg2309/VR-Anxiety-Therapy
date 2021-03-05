@@ -135,3 +135,56 @@ System memory in use after: 93.0 MB.
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2211.
 Total: 2.491900 ms (FindLiveObjects: 0.233900 ms CreateObjectMapping: 0.089500 ms MarkObjects: 1.880400 ms  DeleteObjects: 0.286500 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 362.738823 seconds.
+  path: Assets/low poly pack/Odject
+  artifactKey: Guid(3978b8724e1ed9a44b0850c5d4f619dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly pack/Odject using Guid(3978b8724e1ed9a44b0850c5d4f619dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '724657437e7bd68773f7230d7d0a5869') in 0.008889 seconds
+  Import took 0.015376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001325 seconds.
+  path: Assets/low poly pack/Odject
+  artifactKey: Guid(3978b8724e1ed9a44b0850c5d4f619dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/low poly pack/Odject using Guid(3978b8724e1ed9a44b0850c5d4f619dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '724657437e7bd68773f7230d7d0a5869') in 0.002294 seconds
+  Import took 0.007202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 579.345897 seconds.
+  path: Assets/Sounds/bensound-jazzyfrenchy.mp3
+  artifactKey: Guid(2d61c18b2ca3f8740b3059e08785efa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/bensound-jazzyfrenchy.mp3 using Guid(2d61c18b2ca3f8740b3059e08785efa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '727f740be6eec3318292e78ee4a11d84') in 0.055960 seconds
+  Import took 0.061156 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003683 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\andre\OneDrive\Documents\Computer Science - TUD - Year 4\FYP\VR Anxiety Therapy\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\andre\OneDrive\Documents\Computer Science - TUD - Year 4\FYP\VR Anxiety Therapy\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.263 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.19 ms.
+Unloading 1700 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.3 MB.
+System memory in use after: 93.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2215.
+Total: 3.514300 ms (FindLiveObjects: 0.218300 ms CreateObjectMapping: 0.075000 ms MarkObjects: 2.325700 ms  DeleteObjects: 0.894100 ms)
+
