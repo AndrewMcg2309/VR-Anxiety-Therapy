@@ -90,3 +90,48 @@ Received Import Request.
 Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92518020cd7d0143613db5b90f807cc6') in 0.013160 seconds
   Import took 0.018147 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 427.979846 seconds.
+  path: Assets/Scenes/zapsplat_nature_ocean_waves_tropical_beach_insects_63273.mp3
+  artifactKey: Guid(fdc9577f6272ffe46970727ba74bc295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/zapsplat_nature_ocean_waves_tropical_beach_insects_63273.mp3 using Guid(fdc9577f6272ffe46970727ba74bc295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76df9046f1936acd81e775e49cc00b67') in 0.100585 seconds
+  Import took 0.105460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.866398 seconds.
+  path: Assets/Sounds
+  artifactKey: Guid(b3debec158308a94f841deb8e1a9b665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds using Guid(b3debec158308a94f841deb8e1a9b665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a4e8e48609afdf044c992d4f5f42c0') in 0.003285 seconds
+  Import took 0.008798 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002751 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\andre\OneDrive\Documents\Computer Science - TUD - Year 4\FYP\VR Anxiety Therapy\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\andre\OneDrive\Documents\Computer Science - TUD - Year 4\FYP\VR Anxiety Therapy\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.845 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1700 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.3 MB.
+System memory in use after: 93.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2211.
+Total: 2.491900 ms (FindLiveObjects: 0.233900 ms CreateObjectMapping: 0.089500 ms MarkObjects: 1.880400 ms  DeleteObjects: 0.286500 ms)
+
