@@ -12,7 +12,10 @@ public class Raycast : MonoBehaviour
 
         if(Physics.Raycast (ray, out hitInfo, 100)){
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
-            Destroy(hitInfo.collider.gameObject);
+            if(hitInfo.collider.tag == "Cube")
+            {
+                Destroy(hitInfo.collider.gameObject);
+            }
         } else {
             Debug.DrawLine (ray.origin, ray.origin + ray.direction * 100, Color.green);
         }
