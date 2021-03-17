@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 
 public class Spawner : MonoBehaviour
@@ -11,12 +12,18 @@ public class Spawner : MonoBehaviour
 
     public int max = 10;
 
+
     void Spawn()
     {
+        // object
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0.0f, 1.0f), 1, 1);
-        Vector3 pos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius));
+        
+        // color + emmision   
+        Color baseColor = Color.HSVToRGB(Random.Range(0.0f, 1.0f), 1, 1);
+        cube.GetComponent<Renderer>().material.color = baseColor;
 
+        // position
+        Vector3 pos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius));
         cube.AddComponent<Rigidbody>();
         cube.transform.position = transform.TransformPoint(pos);
 
@@ -64,6 +71,6 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
