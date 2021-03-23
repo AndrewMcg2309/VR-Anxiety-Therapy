@@ -68,6 +68,7 @@ public class Spawner : MonoBehaviour
                 break;
             }
             yield return new WaitForSeconds(1.0f / (float)spawnRate); 
+            
         }
     }
 
