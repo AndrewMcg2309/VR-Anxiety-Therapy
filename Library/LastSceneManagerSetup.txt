@@ -1,9 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/Test.unity
+- path: Assets/Scenes/VRT.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
-- path: Assets/Scene Prefabs/Demo1.unity
+- path: Assets/Scene Prefabs/Main Environment.unity
   isLoaded: 1
   isActive: 0
   isSubScene: 0

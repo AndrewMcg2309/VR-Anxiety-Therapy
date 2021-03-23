@@ -26,6 +26,7 @@ public class Spawner : MonoBehaviour
         Vector3 pos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius));
         cube.AddComponent<Rigidbody>();
         cube.transform.position = transform.TransformPoint(pos);
+        cube.transform.localScale = new Vector3(2,2,2);
 
         cube.transform.parent = this.transform;
         cube.tag = "Cube";
@@ -39,6 +40,7 @@ public class Spawner : MonoBehaviour
 
     void OnEnable()
     {
+
         StartCoroutine(SpawnCoroutine());
     }
 
@@ -46,6 +48,9 @@ public class Spawner : MonoBehaviour
 
     System.Collections.IEnumerator SpawnCoroutine()
     {
+        // wait for certain time
+        yield return new WaitForSeconds(5);
+
         while(true)
         {
             Spawn();
