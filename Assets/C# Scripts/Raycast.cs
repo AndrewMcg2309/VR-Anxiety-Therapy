@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Raycast : MonoBehaviour
 {
-
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hitInfo;
 
-        if(Physics.Raycast (ray, out hitInfo, 100)){
+        if(Physics.Raycast (ray, out hitInfo, 100))
+        {
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
             if(hitInfo.collider.tag == "Cube")
             {
-                Destroy(hitInfo.collider.gameObject);
+                Destroy(hitInfo.transform.gameObject);
             }
-        } else {
-            Debug.DrawLine (ray.origin, ray.origin + ray.direction * 100, Color.green);
-        }
+        }      
     }
 }
