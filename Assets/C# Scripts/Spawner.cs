@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        //Invoke("Spawn", 5);
+
     }
 
     void OnEnable()
@@ -49,19 +49,12 @@ public class Spawner : MonoBehaviour
     System.Collections.IEnumerator SpawnCoroutine()
     {
         // wait for certain time
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
 
         while(true)
         {
             Spawn();
             
-            /*
-            count ++;
-            if (transform.childCount == max)
-            {
-                break;
-            }
-            */
             GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
             if (cubes.Length == max)
             {
@@ -79,4 +72,6 @@ public class Spawner : MonoBehaviour
     {
 
     }
+
+    
 }

@@ -14,6 +14,8 @@ public class Explosion : MonoBehaviour {
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
 
+
+
     // Use this for initialization
     void Start() {
 
@@ -22,11 +24,6 @@ public class Explosion : MonoBehaviour {
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
-
-    }
-
-    // Update is called once per frame
-    void Update() {
 
     }
 
@@ -63,7 +60,6 @@ public class Explosion : MonoBehaviour {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
             }
         }
-
     }
 
     void createPiece(int x, int y, int z) {
