@@ -30,13 +30,11 @@ public class Spawner : MonoBehaviour
 
         cube.transform.parent = this.transform;
         cube.tag = "Cube";
-    }
 
-
-    void Start()
-    {
+        
 
     }
+
 
     void OnEnable()
     {
@@ -62,16 +60,9 @@ public class Spawner : MonoBehaviour
             }
             yield return new WaitForSeconds(1.0f / (float)spawnRate); 
             
+
+            
+        
         }
     }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    
 }

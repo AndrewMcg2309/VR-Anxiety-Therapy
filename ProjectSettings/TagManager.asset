@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cube
   - Shatter
+  - Plane
   layers:
   - Default
   - TransparentFX
