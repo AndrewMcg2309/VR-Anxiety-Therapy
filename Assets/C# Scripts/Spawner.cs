@@ -41,8 +41,6 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
-    int count = 0;
-
     System.Collections.IEnumerator SpawnCoroutine()
     {
         // wait for certain time
