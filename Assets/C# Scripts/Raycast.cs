@@ -5,9 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Raycast : MonoBehaviour
 {
+    // eplosion
     public float cubeSize = 0.2f;
     public int cubesInRow = 5;
-
     float cubesPivotDistance;
     Vector3 cubesPivot;
 
@@ -36,7 +36,6 @@ public class Raycast : MonoBehaviour
 
                 // audio
                 audioSource.Play(0);
-
 
                 Explode();
             }
