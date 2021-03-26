@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Raycast : MonoBehaviour
 {
     public float cubeSize = 0.2f;
@@ -13,6 +14,9 @@ public class Raycast : MonoBehaviour
     public float explosionForce = 50f;
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
+
+    // audio
+    AudioSource audioSource;
 
     
     void Update()
@@ -29,6 +33,11 @@ public class Raycast : MonoBehaviour
 
                 //make object disappear
                 Destroy(hitInfo.transform.gameObject);
+
+                // audio
+                audioSource.Play(0);
+
+
                 Explode();
             }
         }      
@@ -71,7 +80,9 @@ public class Raycast : MonoBehaviour
 
 
     // Use this for initialization
-    void Start() {
+    void Start() 
+    {
+        audioSource = GetComponent<AudioSource>();
 
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
@@ -93,6 +104,8 @@ public class Raycast : MonoBehaviour
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
+
+        Destroy(piece, 2);
     }
 
 }
