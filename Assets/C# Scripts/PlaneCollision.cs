@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlaneCollision : MonoBehaviour
 {
+    Color color;
+
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
     {
@@ -13,9 +15,12 @@ public class PlaneCollision : MonoBehaviour
         {
             //Output the message
             Debug.Log("Box hit Plane");
+            // color
+            color = collision.gameObject.GetComponent<MeshRenderer>().material.color;
+
             Destroy(collision.gameObject);
             Vector3 poc = collision.transform.position;
-            Explode(poc);
+            Explode(poc, color);
         }
     }
 
@@ -42,14 +47,14 @@ public class PlaneCollision : MonoBehaviour
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
 
-    void Explode(Vector3 pos)
+    void Explode(Vector3 pos, Color objectColor)
     {
         Debug.Log("2");
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++) {
             for (int y = 0; y < cubesInRow; y++) {
                 for (int z = 0; z < cubesInRow; z++) {
-                    createPiece(pos.x + (x * cubeSize), pos.y + (y * cubeSize), pos.z + (z * cubeSize));
+                    createPiece(pos.x + (x * cubeSize), pos.y + (y * cubeSize), pos.z + (z * cubeSize), objectColor);
                 }
             }
         }
@@ -70,10 +75,13 @@ public class PlaneCollision : MonoBehaviour
         Debug.Log("5");
     }
 
-    void createPiece(float x, float y, float z) {
+    void createPiece(float x, float y, float z, Color objectColor) {
         //create piece
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+        // colour
+        piece.GetComponent<Renderer>().material.color = objectColor;
 
         //set piece position and scale
         piece.transform.position = new Vector3(x, y, z) - cubesPivot;

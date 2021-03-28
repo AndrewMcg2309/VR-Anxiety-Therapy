@@ -14,6 +14,9 @@ public class Raycast : MonoBehaviour
     public float explosionUpward = 0.4f;
     // audio
     AudioSource audioSource;
+
+    Color color;
+
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
@@ -24,23 +27,28 @@ public class Raycast : MonoBehaviour
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
             if(hitInfo.collider.tag == "Cube")
             {
+                // color
+                color = hitInfo.transform.gameObject.GetComponent<MeshRenderer>().material.color;
+
                 //make object disappear
                 Destroy(hitInfo.transform.gameObject);
+                
                 // audio
                 audioSource.Play(0);
+                
 
-                Explode(hitInfo.transform.position);
+                Explode(hitInfo.transform.position, color);
             }
         }      
     }
-    void Explode(Vector3 pos)
+    void Explode(Vector3 pos, Color objectColor)
     {
         Debug.Log("2");
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++) {
             for (int y = 0; y < cubesInRow; y++) {
                 for (int z = 0; z < cubesInRow; z++) {
-                    createPiece(pos.x + (x * cubeSize), pos.y + (y * cubeSize), pos.z + (z * cubeSize));
+                    createPiece(pos.x + (x * cubeSize), pos.y + (y * cubeSize), pos.z + (z * cubeSize), objectColor);
                 }
             }
         }
@@ -69,10 +77,13 @@ public class Raycast : MonoBehaviour
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
-    void createPiece(float x, float y, float z) {
+    void createPiece(float x, float y, float z, Color objectColor) {
         //create piece
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+         // colour
+        piece.GetComponent<Renderer>().material.color = objectColor;
 
         //set piece position and scale
         piece.transform.position = new Vector3(x, y, z) - cubesPivot;
