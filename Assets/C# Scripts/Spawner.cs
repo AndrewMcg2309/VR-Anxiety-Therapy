@@ -8,9 +8,9 @@ public class Spawner : MonoBehaviour
 {
     public float radius = 10;
 
-    public int spawnRate = 5;
+    public int spawnRate = 1;
 
-    public int max = 10;
+    public int max = 25;
 
 
     void Spawn()
@@ -32,6 +32,8 @@ public class Spawner : MonoBehaviour
 
         cube.transform.parent = this.transform;
         cube.tag = "Cube";
+
+        Debug.Log("spawn Rate: " + spawnRate);
         
     }
   
@@ -40,10 +42,15 @@ public class Spawner : MonoBehaviour
 
     void OnEnable()
     {
-        StartCoroutine(SpawnCoroutine());
+        // coroutines for difficulty 
+
+        StartCoroutine(Start());
+        
+        StartCoroutine(GameStages());
+
     }
 
-    System.Collections.IEnumerator SpawnCoroutine()
+    System.Collections.IEnumerator Start()
     {
         // wait for certain time
         yield return new WaitForSeconds(1);
@@ -59,8 +66,22 @@ public class Spawner : MonoBehaviour
             }
             yield return new WaitForSeconds(1.0f / (float)spawnRate); 
 
-        
-        
         }
+    }
+
+    // medium difficulty 
+    System.Collections.IEnumerator GameStages()
+    {
+        // medium
+        yield return new WaitForSeconds(5);
+        spawnRate = 2;
+
+        // hard
+        yield return new WaitForSeconds(5);
+        spawnRate = 3;
+
+        // finish
+        yield return new WaitForSeconds(5);
+        spawnRate = 0;
     }
 }
