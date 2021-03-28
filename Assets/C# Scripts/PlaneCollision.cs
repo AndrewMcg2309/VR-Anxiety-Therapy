@@ -13,8 +13,6 @@ public class PlaneCollision : MonoBehaviour
         //Check to see if the Collider's name is "Chest"
         if (collision.collider.tag == "Cube")
         {
-            //Output the message
-            Debug.Log("Box hit Plane");
             // color
             color = collision.gameObject.GetComponent<MeshRenderer>().material.color;
 
@@ -49,7 +47,6 @@ public class PlaneCollision : MonoBehaviour
 
     void Explode(Vector3 pos, Color objectColor)
     {
-        Debug.Log("2");
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++) {
             for (int y = 0; y < cubesInRow; y++) {
@@ -62,7 +59,6 @@ public class PlaneCollision : MonoBehaviour
         //get colliders in that position and radius
         Collider[] colliders = Physics.OverlapSphere(pos, explosionRadius);
         //add explosion force to all colliders in that overlap sphere
-        Debug.Log("4");
         foreach (Collider hit in colliders) 
         {
             //get rigidbody from collider object
@@ -72,7 +68,6 @@ public class PlaneCollision : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, pos, explosionRadius, explosionUpward);
             }
         }
-        Debug.Log("5");
     }
 
     void createPiece(float x, float y, float z, Color objectColor) {

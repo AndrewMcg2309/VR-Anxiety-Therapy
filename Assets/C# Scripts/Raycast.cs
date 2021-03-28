@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(AudioSource))]
 public class Raycast : MonoBehaviour
 {
@@ -17,13 +19,16 @@ public class Raycast : MonoBehaviour
 
     Color color;
 
+    int score;
+    public Text scoreText;
+    
+
     void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hitInfo;
         if(Physics.Raycast (ray, out hitInfo, 100))
         {
-            Debug.Log("1");
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
             if(hitInfo.collider.tag == "Cube")
             {
@@ -36,14 +41,22 @@ public class Raycast : MonoBehaviour
                 // audio
                 audioSource.Play(0);
                 
-
+                // explode
                 Explode(hitInfo.transform.position, color);
+
+                // add point
+                AddScore();
             }
         }      
     }
+
+    void AddScore()
+    {
+        score++;
+        scoreText.text = "" + score;
+    }
     void Explode(Vector3 pos, Color objectColor)
     {
-        Debug.Log("2");
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++) {
             for (int y = 0; y < cubesInRow; y++) {
@@ -55,8 +68,8 @@ public class Raycast : MonoBehaviour
 
         //get colliders in that position and radius
         Collider[] colliders = Physics.OverlapSphere(pos, explosionRadius);
+
         //add explosion force to all colliders in that overlap sphere
-        Debug.Log("4");
         foreach (Collider hit in colliders) 
         {
             //get rigidbody from collider object
@@ -66,11 +79,13 @@ public class Raycast : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, pos, explosionRadius, explosionUpward);
             }
         }
-        Debug.Log("5");
     }
     // Use this for initialization
     void Start() 
     {
+        //initialize score
+        score = 0;
+
         audioSource = GetComponent<AudioSource>();
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
@@ -78,8 +93,8 @@ public class Raycast : MonoBehaviour
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
 
-    void createPiece(float x, float y, float z, Color objectColor) {
-        //create piece
+    void createPiece(float x, float y, float z, Color objectColor) 
+    {
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         piece.layer = 8;

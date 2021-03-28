@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 140
+  controlID: 39
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,10 +150,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 709, y: 471}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 708, y: 471}
+  m_MaxSize: {x: 18003, y: 14021}
   vertical: 0
-  controlID: 90
+  controlID: 85
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 573
     height: 1307
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -553,13 +553,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\andre\OneDrive\Documents\Computer Science - TUD - Year
     4\FYP\VR Anxiety Therapy
@@ -567,9 +567,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 947f0000
-    m_LastClickedID: 32660
-    m_ExpandedIDs: 00000000767f0000787f00007a7f00007c7f000000ca9a3b
+    m_SelectedIDs: 7a7f0000
+    m_LastClickedID: 32634
+    m_ExpandedIDs: 000000007a7f00007c7f00007e7f0000807f0000aa7f0000b0870000b287000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -597,7 +597,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000767f0000787f00007a7f00007c7f0000
+    m_ExpandedIDs: 000000007a7f00007c7f00007e7f0000807f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -778,9 +778,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -38.279655, y: 19.349312, z: 19.588501}
+    m_Target: {x: -3.0861855, y: 25.393068, z: 33.027855}
     speed: 2
-    m_Value: {x: -38.279655, y: 19.349312, z: 19.588501}
+    m_Value: {x: -3.0861855, y: 25.393068, z: 33.027855}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -827,13 +827,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03416044, y: -0.31474403, z: -0.011337021, w: 0.94850695}
+    m_Target: {x: -0.07753295, y: -0.09942934, z: -0.0077804937, w: 0.99200517}
     speed: 2
-    m_Value: {x: -0.034160018, y: -0.31474015, z: -0.011336883, w: 0.9484953}
+    m_Value: {x: -0.0775317, y: -0.09942774, z: -0.0077803684, w: 0.9919892}
   m_Size:
-    m_Target: 86.29124
+    m_Target: 17.222044
     speed: 2
-    m_Value: 86.29124
+    m_Value: 17.222044
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -888,7 +888,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a8dedeff1efbffff24fbffff567e0000587e0000
+      m_ExpandedIDs: 1efbffff24fbffff507e00005c7e00005e7e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
