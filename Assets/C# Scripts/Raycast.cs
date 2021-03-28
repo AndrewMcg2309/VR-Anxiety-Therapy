@@ -77,10 +77,12 @@ public class Raycast : MonoBehaviour
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
     }
+
     void createPiece(float x, float y, float z, Color objectColor) {
         //create piece
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        piece.layer = 8;
 
          // colour
         piece.GetComponent<Renderer>().material.color = objectColor;
@@ -92,6 +94,8 @@ public class Raycast : MonoBehaviour
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
+
+        //destoy
         Destroy(piece, 2);
     }
 }

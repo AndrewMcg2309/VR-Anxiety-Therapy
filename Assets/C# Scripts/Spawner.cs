@@ -33,7 +33,10 @@ public class Spawner : MonoBehaviour
 
         cube.transform.parent = this.transform;
         cube.tag = "Cube";
+        
     }
+  
+
 
 
     void OnEnable()
