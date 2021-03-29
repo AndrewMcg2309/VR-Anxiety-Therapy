@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeSize: 0.2
-  cubesInRow: 5
+  cubesInRow: 3
   explosionForce: 50
   explosionRadius: 4
   explosionUpward: 0.4
@@ -1004,7 +1004,7 @@ PrefabInstance:
       objectReference: {fileID: 692586795}
     - target: {fileID: 8178010081838201810, guid: d2d0940023ba47e44b99e3c24ccece1a, type: 3}
       propertyPath: cubesInRow
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8178010081838201810, guid: d2d0940023ba47e44b99e3c24ccece1a, type: 3}
       propertyPath: explosionForce

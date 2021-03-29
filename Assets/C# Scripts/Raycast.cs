@@ -111,6 +111,6 @@ public class Raycast : MonoBehaviour
         piece.GetComponent<Rigidbody>().mass = cubeSize;
 
         //destoy
-        Destroy(piece, 2);
+        Destroy(piece, 1);
     }
 }

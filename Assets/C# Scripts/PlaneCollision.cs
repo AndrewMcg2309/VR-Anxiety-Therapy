@@ -22,10 +22,10 @@ public class PlaneCollision : MonoBehaviour
         }
     }
 
-// -------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
 
     public float cubeSize = 0.2f;
-    public int cubesInRow = 5;
+    public int cubesInRow = 3;
 
     float cubesPivotDistance;
     Vector3 cubesPivot;
@@ -48,9 +48,12 @@ public class PlaneCollision : MonoBehaviour
     void Explode(Vector3 pos, Color objectColor)
     {
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
-        for (int x = 0; x < cubesInRow; x++) {
-            for (int y = 0; y < cubesInRow; y++) {
-                for (int z = 0; z < cubesInRow; z++) {
+        for (int x = 0; x < cubesInRow; x++) 
+        {
+            for (int y = 0; y < cubesInRow; y++) 
+            {
+                for (int z = 0; z < cubesInRow; z++) 
+                {
                     createPiece(pos.x + (x * cubeSize), pos.y + (y * cubeSize), pos.z + (z * cubeSize), objectColor);
                 }
             }
@@ -70,7 +73,8 @@ public class PlaneCollision : MonoBehaviour
         }
     }
 
-    void createPiece(float x, float y, float z, Color objectColor) {
+    void createPiece(float x, float y, float z, Color objectColor) 
+    {
         //create piece
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -85,7 +89,7 @@ public class PlaneCollision : MonoBehaviour
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
-        Destroy(piece, 2);
+        Destroy(piece, 1);
     }
 
     
