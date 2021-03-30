@@ -36,27 +36,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
      <Compile Include="Assets\C# Scripts\AudioAnalyzer.cs" />
      <Compile Include="Assets\C# Scripts\PlaneCollision.cs" />
      <Compile Include="Assets\C# Scripts\AudioSyncScale.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
      <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
      <Compile Include="Assets\C# Scripts\Spawner.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\C# Scripts\AudioSyncer.cs" />
      <Compile Include="Assets\C# Scripts\AudioSpectrum.cs" />
      <Compile Include="Assets\C# Scripts\Raycast.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\C# Scripts\DropExplosion.cs" />
      <Compile Include="Assets\C# Scripts\Explosion.cs" />
-     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
