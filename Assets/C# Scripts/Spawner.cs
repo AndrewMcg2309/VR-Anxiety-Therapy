@@ -37,9 +37,6 @@ public class Spawner : MonoBehaviour
         
     }
   
-
-
-
     void OnEnable()
     {
         // coroutines for difficulty 

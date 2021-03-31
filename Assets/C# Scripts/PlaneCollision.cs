@@ -5,7 +5,20 @@ using UnityEngine;
 
 public class PlaneCollision : MonoBehaviour
 {
+   
+
+    public float cubeSize = 0.2f;
+    public int cubesInRow = 3;
+
+    float cubesPivotDistance;
+    Vector3 cubesPivot;
+
+    public float explosionForce = 50f;
+    public float explosionRadius = 4f;
+    public float explosionUpward = 0.4f;
+    
     Color color;
+
 
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
@@ -21,20 +34,6 @@ public class PlaneCollision : MonoBehaviour
             Explode(poc, color);
         }
     }
-
-// ----------------------------------------------------------------------------------------
-
-    public float cubeSize = 0.2f;
-    public int cubesInRow = 3;
-
-    float cubesPivotDistance;
-    Vector3 cubesPivot;
-
-    public float explosionForce = 50f;
-    public float explosionRadius = 4f;
-    public float explosionUpward = 0.4f;
-
-
 
     // Use this for initialization
     void Start() 
@@ -89,7 +88,8 @@ public class PlaneCollision : MonoBehaviour
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
-        Destroy(piece, 1);
+        
+        Destroy(piece, 0.5f);
     }
 
     
