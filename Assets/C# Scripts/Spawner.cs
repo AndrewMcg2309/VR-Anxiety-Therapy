@@ -10,23 +10,16 @@ public class Spawner : MonoBehaviour
 
     public int spawnRate = 1;
 
-    public int max = 25;
-
-
     void Spawn()
     {
-        // object
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        
-        // color + emmision   
+          
         Color baseColor = Color.HSVToRGB(Random.Range(0.0f, 1.0f), 1, 1);
         cube.GetComponent<Renderer>().material.color = baseColor;
 
-        // position
         Vector3 pos = new Vector3(Random.Range(-radius, radius), 0, Random.Range(-radius, radius));
         cube.AddComponent<Rigidbody>();
 
-        // position
         cube.transform.position = transform.TransformPoint(pos);
         cube.transform.localScale = new Vector3(2,2,2);
 
@@ -49,15 +42,15 @@ public class Spawner : MonoBehaviour
 
     System.Collections.IEnumerator Start()
     {
-        // wait for certain time
-        yield return new WaitForSeconds(1);
+        // wait to start
+        yield return new WaitForSeconds(10);
 
         while(true)
         {
             Spawn();
             
             GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
-            if (cubes.Length == max)
+            if (spawnRate == 0)
             {
                 break;
             }
@@ -70,15 +63,15 @@ public class Spawner : MonoBehaviour
     System.Collections.IEnumerator GameStages()
     {
         // medium
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(25);
         spawnRate = 2;
 
         // hard
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         spawnRate = 3;
 
         // finish
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(15);
         spawnRate = 0;
     }
 }

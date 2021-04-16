@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637515987213208503
+      ticks: 637528707826181484
     m_Hash: 991060236
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -872,6 +872,7 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -924,6 +925,7 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -937,7 +939,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.6.0-pre.1
         - 1.6.0-pre.3
-        verified: 1.4.6
+        verified: 1.4.7
       dependencies:
       - name: com.unity.modules.director
         version: 1.0.0
@@ -1075,6 +1077,7 @@ m_PackageAssets:
         - 0.10.0-preview.7
         - 1.0.0-pre.1
         - 1.0.0-pre.2
+        - 1.0.0-pre.3
         compatible:
         - 0.0.6-preview
         - 0.9.0-preview
@@ -1085,6 +1088,7 @@ m_PackageAssets:
         - 0.10.0-preview.7
         - 1.0.0-pre.1
         - 1.0.0-pre.2
+        - 1.0.0-pre.3
         verified: 
       dependencies:
       - name: com.unity.inputsystem
@@ -1324,9 +1328,13 @@ m_PackageAssets:
         - 1.7.0-preview.2
         - 1.7.0
         - 1.8.1
+        - 1.9.0-preview.1
+        - 1.9.0
         compatible:
         - 1.7.0
         - 1.8.1
+        - 1.9.0-preview.1
+        - 1.9.0
         verified: 1.7.0
       dependencies:
       - name: com.unity.xr.management
@@ -3635,6 +3643,7 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
+        - 10.4.0
         compatible:
         - 10.2.2
         - 10.3.1
@@ -3856,6 +3865,7 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
+        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
         compatible:
@@ -3870,9 +3880,10 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
+        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
-        verified: 4.3.1
+        verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
       keywords:

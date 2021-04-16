@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlaneCollision : MonoBehaviour
 {
    
-
     public float cubeSize = 0.2f;
     public int cubesInRow = 3;
 
@@ -15,7 +14,7 @@ public class PlaneCollision : MonoBehaviour
 
     public float explosionForce = 50f;
     public float explosionRadius = 4f;
-    public float explosionUpward = 0.4f;
+    public float explosionUpward = 1f;
     
     Color color;
 
@@ -23,7 +22,7 @@ public class PlaneCollision : MonoBehaviour
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
     {
-        //Check to see if the Collider's name is "Chest"
+        //Check to see if the Collider's name is "Cube"
         if (collision.collider.tag == "Cube")
         {
             // color

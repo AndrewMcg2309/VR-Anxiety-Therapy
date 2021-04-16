@@ -8,13 +8,13 @@ public class Raycast : MonoBehaviour
 {
     // eplosion pieces
     public float cubeSize = 0.2f;
-    public int cubesInRow = 5;
+    public int cubesInRow = 3;
     float cubesDistance;
     Vector3 cubesPivot;
 
     // explosion forces
     public float explosionForce = 50f;
-    public float explosionRadius = 4f;
+    public float explosionRadius = 5f;
     public float upwardForce = 0.4f;
 
     // audio
@@ -79,17 +79,19 @@ public class Raycast : MonoBehaviour
         //get colliders in that position and radius
         Collider[] colliders = Physics.OverlapSphere(pos, explosionRadius);
 
-        //add explosion force to all colliders in that overlap sphere
+        // explosion
         foreach (Collider hit in colliders) 
         {
-            //get rigidbody from collider object
             Rigidbody rb = hit.GetComponent<Rigidbody>();
-            if (rb != null) {
-                //add explosion force to this body with given parameters
+
+            if (rb != null) 
+            {
+                // add forces to cubes
                 rb.AddExplosionForce(explosionForce, pos, explosionRadius, upwardForce);
             }
         }
     }
+
     // Use this for initialization
     void Start() 
     {
@@ -97,9 +99,13 @@ public class Raycast : MonoBehaviour
         score = 0;
 
         audioSource = GetComponent<AudioSource>();
-        //calculate pivot distance
+
+
+        // calculate pivot distance
+         // use this value to create pivot vector)
+         
         cubesDistance = cubeSize * cubesInRow / 2;
-        //use this value to create pivot vector)
+       
         cubesPivot = new Vector3(cubesDistance, cubesDistance, cubesDistance);
     }
 
@@ -109,14 +115,14 @@ public class Raycast : MonoBehaviour
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         piece.layer = 8;
 
-         // colour
+        // assign colour
         piece.GetComponent<Renderer>().material.color = objectColor;
 
-        //set piece position and scale
+        // set piece position and size
         piece.transform.position = new Vector3(x, y, z) - cubesPivot;
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
 
-        //add rigidbody and set mass
+        // add rigidbody 
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
 
