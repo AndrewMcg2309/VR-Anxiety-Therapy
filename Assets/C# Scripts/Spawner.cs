@@ -26,8 +26,7 @@ public class Spawner : MonoBehaviour
         cube.transform.parent = this.transform;
         cube.tag = "Cube";
 
-        Debug.Log("spawn Rate: " + spawnRate);
-        
+        Debug.Log("spawn Rate: " + spawnRate); 
     }
   
     void OnEnable()
@@ -49,7 +48,7 @@ public class Spawner : MonoBehaviour
         {
             Spawn();
             
-            GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
+            //GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
             if (spawnRate == 0)
             {
                 break;
@@ -73,5 +72,7 @@ public class Spawner : MonoBehaviour
         // finish
         yield return new WaitForSeconds(15);
         spawnRate = 0;
+
+        
     }
 }

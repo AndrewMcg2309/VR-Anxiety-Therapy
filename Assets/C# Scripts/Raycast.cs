@@ -76,6 +76,7 @@ public class Raycast : MonoBehaviour
             }
         }
 
+
         //get colliders in that position and radius
         Collider[] colliders = Physics.OverlapSphere(pos, explosionRadius);
 
@@ -108,6 +109,7 @@ public class Raycast : MonoBehaviour
        
         cubesPivot = new Vector3(cubesDistance, cubesDistance, cubesDistance);
     }
+
 
     void createPiece(float x, float y, float z, Color objectColor) 
     {
